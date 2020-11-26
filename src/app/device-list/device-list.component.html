@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+    <h1 class="text-left">Devices</h1>
+  </div>
+</div>
+<div class="row pb-5">
+    <div *ngFor="let lists of devicelist" class="col-lg-4 col-md-4 col-sm-12 col-12 cursor-pointer mat-h3" (click)="deviceInfo(lists.skuid)">
+      <div class="row">
+        <div class="col-lg-11 col-md-11 col-sm-12 col-12 mx-lg-3 my-2 py-3 border">
+          <p class="text-center font-weight-normal ">{{ lists.devicename }}</p>
+          <img src="{{ lists.deviceimage }}" class="img-fluid" alt="Image not found"/>
+          <p class="text-center">
+            <span class="font-weight-bold" *ngIf="lists.deviceofferprice > 0"><del>{{ lists.deviceprice | currency:lists.currency }}</del></span>
+            <span class="font-weight-bold" *ngIf="lists.deviceofferprice <= 0">{{ lists.deviceprice | currency:lists.currency }}</span>
+            <span *ngIf="lists.deviceofferprice > 0" class="font-weight-bold pl-1">{{ lists.deviceofferprice | currency:lists.currency }}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<mat-spinner mode="indeterminate" diameter="50" class="spinner-center" *ngIf="!devicelist"></mat-spinner>

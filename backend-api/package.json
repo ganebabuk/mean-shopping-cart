@@ -1,0 +1,11 @@
+{
+  "name": "shopping-cart",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "randomstring": "^1.1.5",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

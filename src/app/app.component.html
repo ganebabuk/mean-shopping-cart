@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <!-- Header -->
+ <header class="page-footer font-small pt-4">
+
+   <div class="row fixed-top">
+     <div class="col-md-12 col-lg-12 col-12 col-sm-12 indigo">
+       <!--Navbar-->
+        <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" [containerInside]="false">
+          <div class="d-block d-sm-none">
+            <span class="glyphicon glyphicon-shopping-cart cursor-pointer text-light cart-icon" aria-hidden="true" (click)="showCart();"></span>
+          </div>
+          <div class="d-none d-md-block d-lg-none">
+            <span class="glyphicon glyphicon-shopping-cart cursor-pointer text-light cart-icon" aria-hidden="true" (click)="showCart();"></span>
+          </div>
+          <!-- Navbar brand -->
+          <mdb-navbar-brand>
+            <a class="navbar-brand" [routerLink]="['devices']">Shop Online</a>
+          </mdb-navbar-brand>
+          <!-- Collapsible content -->
+          <links>
+              <!-- Links -->
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                      <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['devices']">Devices</a>
+                  </li>
+                  <!-- Dropdown -->
+                  <li class="nav-item dropdown" dropdown>
+                      <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>Orders<span class="caret"></span></a>
+                      <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['order-status']">Order Status</a>
+                      </div>
+                  </li>
+              </ul>
+              <!-- Links -->
+          </links>
+          <!-- Collapsible content -->
+          <div class="cart-icon-badges d-none d-lg-block">
+            <span class="glyphicon glyphicon-shopping-cart cursor-pointer text-light cart-icon" aria-hidden="true" (click)="showCart();"></span>
+          </div>
+        </mdb-navbar>
+        <!--/.Navbar-->
+     </div>
+   </div>
+ </header>
+ <!-- Header -->
+ <!-- Section -->
+ <section class="my-5 mx-3">
+   <router-outlet></router-outlet>
+ </section>
+ <!-- Section -->
+ <!-- Footer -->
+<footer class="font-small text-white py-2 px-1 fixed-bottom text-center indigo">
+ <div class="row">
+   <div class="col-md-12 col-lg-12 col-12 col-sm-12 text-white">
+     <a href="//github.com/ganebabuk" target="_blank"><span class="text-white">&copy; github.com/ganebabuk</span></a>
+   </div>
+ </div>
+</footer>
+ <!-- Footer -->
+</div>
+

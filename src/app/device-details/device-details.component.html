@@ -1,0 +1,37 @@
+<div class="row justify-content-center" *ngIf="deviceDetails$ | async; let deviceDetail">
+  <div class="col-lg-5 col-md-5 col-sm-12 col-12 border my-2 mx-2 m-lg-2 py-3 px-2">
+    <h1 class="text-center">{{ deviceDetail.devicename }}</h1>
+    <img src="{{ deviceDetail.deviceimage }}" class="img-fluid" alt="Image not found"/>
+    <p class="text-center font-weight-bold mat-h3">
+      <span class="" *ngIf="deviceDetail.deviceofferprice > 0"><del>{{ deviceDetail.deviceprice | currency:deviceDetail.currency }}</del></span>
+      <span class="" *ngIf="deviceDetail.deviceofferprice <= 0">{{ deviceDetail.deviceprice | currency:deviceDetail.currency }}</span>
+      <span *ngIf="deviceDetail.deviceofferprice > 0" class="pl-1">{{ deviceDetail.deviceofferprice | currency:deviceDetail.currency }}</span>
+    </p>
+  </div>
+  <div class="col-lg-5 col-md-5 col-sm-12 col-12 my-2 mx-2 m-lg-2 py-3 px-2 mat-h3">
+    <p class="text-left font-weight-bold">Key Features</p>
+    <ul>
+      <li>6.1" Liquid Retina HD Display</li>
+      <li>Dual SIM (nano-SIM and eSIM)</li>
+      <li>12 MP Rear Camera, 7 MP Selfie Camera</li>
+      <li>Fingerprint-resistant Oleophobic Coating</li>
+      <li>A12 Bionic Chip, iOS 12 OS</li>
+      <li>Splash, Water & Dust Resistant</li>
+    </ul>
+    <mat-form-field class="">
+      <mat-label>Qty</mat-label>
+      <select matNativeControl #qty>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </mat-form-field>
+
+    <div class="text-left-md text-center">
+      <button mdbBtn type="button" color="indigo" mdbWavesEffect class="text-center" [disabled]="buttonDisable ? 'disabled' : ''" (click)="addToCart(deviceDetail);">Add to Cart <span class="pl-1 glyphicon glyphicon-shopping-cart"></span></button>
+    </div>
+  </div>
+</div>
+<mat-spinner mode="indeterminate" diameter="50" class="spinner-center" *ngIf="!isLoad"></mat-spinner>
+

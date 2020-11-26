@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+    <h1 class="text-left">Track Your Order</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+    <form class="" [formGroup]="orderStatusForm" (ngSubmit)="onSubmit()">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7 col-12 col-sm-12 py-1 px-3">
+          <mat-form-field class="" [style.width.%]=100>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" placeholder="Email" value="" formControlName="email">
+            <mat-error *ngIf="orderStatusForm.get('email').hasError('required')">
+              Email is required!
+            </mat-error>
+            <mat-error *ngIf="orderStatusForm.get('email').hasError('pattern')">
+              Please enter a valid email!
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7 col-12 col-sm-12 py-1 px-3">
+          <mat-form-field class="" [style.width.%]=100>
+            <mat-label>Mobile</mat-label>
+            <input matInput type="tel" class="" formControlName="mobile">
+            <span matPrefix>+1&nbsp;</span>
+            <mat-error *ngIf="orderStatusForm.get('mobile').hasError('required')">
+              Mobile number is required!
+            </mat-error>
+            <mat-error *ngIf="orderStatusForm.get('mobile').hasError('pattern') || orderStatusForm.get('mobile').hasError('minlength') || orderStatusForm.get('mobile').hasError('maxlength')">
+              Please enter a valid number!
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7 col-12 col-sm-12 py-1 px-3 text-center">
+          <button mdbBtn type="submit" color="indigo" mdbWavesEffect class="" [disabled]="buttonDisable">Track Order <span class="pl-1 glyphicon glyphicon-shopping-cart"></span></button>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7 col-12 col-sm-12 py-1 px-3 text-center font-italic">
+          <p><span class="font-weight-bold">Note: </span><span>Last 10 orders only.</span></p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row mt-5 justify-content-center" [hidden]="hidden">
+  <div class="col-lg-5 col-md-7 col-sm-12 col-12 p-0 mb-5">
+    <mat-accordion *ngFor="let orders of orderList;  let i = index;">
+      <mat-expansion-panel [expanded]="i === currentOpenedItemId" (opened)="handleOpened(i)" class="my-2">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="orderid-small">
+            <span class="font-weight-bold">Order No:</span>&nbsp;<span>{{ orders._id }}</span>
+          </mat-panel-title>
+          <mat-panel-description></mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="row mt-2 border-top pt-5 order-content-small">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <p><span class="font-weight-bold">Name: </span><span>{{ orders.customer.firstName | uppercase }} {{ orders.customer.lastName | uppercase }}</span></p>
+            <p><span class="font-weight-bold">Date: </span><span>{{ orders.customer.dateCreated | date: 'MMM d, y, hh:mm a' }}</span></p>
+            <p><span class="font-weight-bold">Net Total: </span><span>{{ orders.customer.totalAmount | currency:orders.customer.currencyType }}</span></p>
+            <p><span class="font-weight-bold">Address: </span><br/><span>{{ orders.customer.address}}, <br/>{{ orders.customer.city }},<br/>{{ orders.customer.state }},<br/>{{ orders.customer.zipcode }}.</span></p>
+            <p><span class="font-weight-bold">Contact: </span><br/><span>{{ orders.customer.email}}</span><br/><span>+1 {{ orders.customer.mobile | mobile}}</span></p>
+            <p><span class="font-weight-bold">Order Status: </span><span class="text-success font-weight-bold">{{ orders.customer.shipmentStatus }}</span></p>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="row justify-content-center" *ngFor="let carts of orders.carts">
+              <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <p class="text-center">
+                      <span>{{ carts.devicename }}</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-8 col-md-6 col-sm-6 col-6">
+                    <a href="/device-details?skuid={{carts.skuid  }}"><img src="{{ carts.deviceimage }}" class="img-fluid" alt="Image not found"/></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <p class="text-center pt-2">
+                      <span>{{ carts.qty }} x {{ carts.deviceprice | currency:orders.customer.currencyType }}</span><br/>
+                      <span>{{ carts.totalamount | currency:orders.customer.currencyType }}</span><br/>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
