@@ -45,3 +45,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# DBConfig
+/backend-api/config/dbconfig.js
