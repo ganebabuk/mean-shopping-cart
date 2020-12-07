@@ -1,0 +1,158 @@
+[{
+  "_id": {
+    "$oid": "5f6340196868ca0e89c5b5df"
+  },
+  "carts": [
+    {
+      "_id": {
+        "$oid": "5f6340196868ca0e89c5b5e0"
+      },
+      "skuid": "IPHONEBLK64GB",
+      "devicename": "Apple iPhone 10 Black 64GB, 4GB RAM",
+      "deviceofferprice": 90,
+      "deviceprice": 90,
+      "totalamount": 270,
+      "currency": "USD",
+      "deviceimage": "/assets/images/devices/1.jpeg",
+      "qty": 3
+    }
+  ],
+  "customer": {
+    "firstName": "shanmugasundaram",
+    "lastName": "vijayaragavan",
+    "address": "New Street",
+    "city": "Mayiladuthurai",
+    "state": "Tennessee",
+    "zipcode": "61820",
+    "email": "aquass88@gmail.com",
+    "mobile": "8237482367",
+    "totalAmount": 270,
+    "currencyType": "USD",
+    "dateCreated": {
+      "$date": "2020-09-17T10:53:13.394Z"
+    },
+    "shipmentStatus": "Yet to pack"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f9799696868ca0e89c5b5f1"
+  },
+  "carts": [
+    {
+      "_id": {
+        "$oid": "5f9799696868ca0e89c5b5f2"
+      },
+      "skuid": "IPHONEBLK64GB",
+      "devicename": "Apple iPhone 10 Black 64GB, 4GB RAM",
+      "deviceofferprice": 90,
+      "deviceprice": 90,
+      "totalamount": 90,
+      "currency": "USD",
+      "deviceimage": "/assets/images/devices/1.jpeg",
+      "qty": 1
+    }
+  ],
+  "customer": {
+    "firstName": "Ganeshbabu",
+    "lastName": "Kuppusamy",
+    "address": "2109 fox drive",
+    "city": "Kansas",
+    "state": "Virginia",
+    "zipcode": "66020",
+    "email": "kganeshbabu.it@gmail.com",
+    "mobile": "9566906792",
+    "totalAmount": 90,
+    "currencyType": "USD",
+    "dateCreated": {
+      "$date": "2020-10-27T03:52:09.634Z"
+    },
+    "shipmentStatus": "Yet to pack"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fc67dd7610ec47024ae421e"
+  },
+  "carts": [
+    {
+      "_id": {
+        "$oid": "5fc67dd7610ec47024ae421f"
+      },
+      "skuid": "IPHONEBLK64GB",
+      "devicename": "Apple iPhone 10 Black 64GB, 4GB RAM",
+      "deviceofferprice": 90,
+      "deviceprice": 90,
+      "totalamount": 90,
+      "currency": "USD",
+      "deviceimage": "/assets/images/devices/1.jpeg",
+      "qty": 1
+    },
+    {
+      "_id": {
+        "$oid": "5fc67dd7610ec47024ae4220"
+      },
+      "skuid": "IPHONEORG64GB",
+      "devicename": "Apple iPhone 10 Orange 64GB, 4GB RAM",
+      "deviceofferprice": 100,
+      "deviceprice": 100,
+      "totalamount": 100,
+      "currency": "USD",
+      "deviceimage": "/assets/images/devices/4.jpeg",
+      "qty": 1
+    }
+  ],
+  "customer": {
+    "firstName": "Aru'",
+    "lastName": "ddddf",
+    "address": "70/1, VINAYAGARKOVILSTREET",
+    "city": "THALAVAIPETTAI",
+    "state": "American Samoa",
+    "zipcode": "78975",
+    "email": "cscjec@gmai.com",
+    "mobile": "9878890009",
+    "totalAmount": 190,
+    "currencyType": "USD",
+    "dateCreated": {
+      "$date": "2020-12-01T17:31:03.699Z"
+    },
+    "shipmentStatus": "Yet to pack"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fc7a7570704d81d9c0e70d7"
+  },
+  "carts": [
+    {
+      "_id": {
+        "$oid": "5fc7a7570704d81d9c0e70d8"
+      },
+      "skuid": "IPHONEORG64GB",
+      "devicename": "Apple iPhone 10 Orange 64GB, 4GB RAM",
+      "deviceofferprice": 100,
+      "deviceprice": 100,
+      "totalamount": 100,
+      "currency": "USD",
+      "deviceimage": "/assets/images/devices/4.jpeg",
+      "qty": 1
+    }
+  ],
+  "customer": {
+    "firstName": "mfrjgnrjf",
+    "lastName": "dkdmm",
+    "address": "k3r9jm39ko93mri3",
+    "city": "okrokok",
+    "state": "Arizona",
+    "zipcode": "42334",
+    "email": "vishnuvijay0608@gmail.com",
+    "mobile": "8056905156",
+    "totalAmount": 100,
+    "currencyType": "USD",
+    "dateCreated": {
+      "$date": "2020-12-02T14:40:23.732Z"
+    },
+    "shipmentStatus": "Yet to pack"
+  },
+  "__v": 0
+}]

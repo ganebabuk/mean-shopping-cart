@@ -1,0 +1,89 @@
+[{
+  "_id": {
+    "$oid": "5f38094a0789891002c877fb"
+  },
+  "skuid": "IPHONEBLK64GB",
+  "devicename": "Apple iPhone 10 Black 64GB, 4GB RAM",
+  "deviceofferprice": 90,
+  "deviceprice": 100,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/1.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f38099d61ca971029fdaed3"
+  },
+  "skuid": "IPHONEWHT64GB",
+  "devicename": "Apple iPhone 10 White 64GB, 4GB RAM",
+  "deviceofferprice": 90,
+  "deviceprice": 100,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/2.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f380a4eda6f061041638338"
+  },
+  "skuid": "IPHONERED64GB",
+  "devicename": "Apple iPhone 10 Red 64GB, 4GB RAM",
+  "deviceofferprice": 90,
+  "deviceprice": 100,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/3.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f380b56932c0a1092a3a1cb"
+  },
+  "skuid": "IPHONEBLK32GB",
+  "devicename": "Apple iPhone 10 Black 32GB, 3GB RAM",
+  "deviceofferprice": 0,
+  "deviceprice": 80,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/1.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f380ba8e590d310a1a83b7a"
+  },
+  "skuid": "IPHONEWHT32GB",
+  "devicename": "Apple iPhone 10 White 32GB, 3GB RAM",
+  "deviceofferprice": 0,
+  "deviceprice": 80,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/2.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f380be461a77210b1738ccb"
+  },
+  "skuid": "IPHONERED32GB",
+  "devicename": "Apple iPhone 10 Red 32GB, 3GB RAM",
+  "deviceofferprice": 0,
+  "deviceprice": 80,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/3.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f46596429baa60d25594932"
+  },
+  "skuid": "IPHONEORG64GB",
+  "devicename": "Apple iPhone 10 Orange 64GB, 4GB RAM",
+  "deviceofferprice": 100,
+  "deviceprice": 110,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/4.jpeg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5f572273be1d0d0c84e1e5ae"
+  },
+  "skuid": "IPHONEORG32GB",
+  "devicename": "Apple iPhone 10 Orange 32GB, 3GB RAM",
+  "deviceofferprice": 0,
+  "deviceprice": 100,
+  "currency": "USD",
+  "deviceimage": "/assets/images/devices/4.jpeg",
+  "__v": 0
+}]
